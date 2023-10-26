@@ -1,19 +1,3 @@
-recommended_movies = ['Хатико', '23', 'Достучаться до небес',
-                      'Хакеры', 'Трон', '1408']
-
-hackers_movies = ['Трон', 'Военные игры', 'Тихушники',
-                  'Джонни Мнемоник', 'Хакеры', 'Нирвана',
-                  '23', 'Враг государства', 'Взлом',
-                  'Пароль рыба-меч', 'Сеть', 'Кто я']
-#i = set(recommended_movies)
-#n = set(hackers_movies)
-#w = i.intersection(n)
-#r = list(w)
-for i in recommended_movies:
-    if i in hackers_movies:
-        print('Разработчикам рекомендуется посмотреть фильм ' + f'"{i}"')
-
-
 from random import randint
 
 
