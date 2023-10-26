@@ -1,3 +1,19 @@
+recommended_movies = ['Хатико', '23', 'Достучаться до небес',
+                      'Хакеры', 'Трон', '1408']
+
+hackers_movies = ['Трон', 'Военные игры', 'Тихушники',
+                  'Джонни Мнемоник', 'Хакеры', 'Нирвана',
+                  '23', 'Враг государства', 'Взлом',
+                  'Пароль рыба-меч', 'Сеть', 'Кто я']
+#i = set(recommended_movies)
+#n = set(hackers_movies)
+#w = i.intersection(n)
+#r = list(w)
+for i in recommended_movies:
+    if i in hackers_movies:
+        print('Разработчикам рекомендуется посмотреть фильм ' + f'"{i}"')
+
+
 from random import randint
 
 
@@ -36,7 +52,7 @@ def get_user_attack():
         input_attack = input('Введи тип атаки: ').lower()
         attack_value = attacks_types[input_attack]()
         print(f'Количество очков твоей атаки: {attack_value}.')
-        total += 1
+        total += attack_value
     return total
 
 
@@ -52,6 +68,9 @@ def run_game():
     yes_no = {
         'Y': True,
         'N': False,
+        # Новые значения словаря.
+        'y': True,
+        'n': False,
     }
     replay = input('Чтобы сыграть ещё раз, введи "y"; '
                    'если не хочешь продолжать игру, введи "n": ')
